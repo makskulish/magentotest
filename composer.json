@@ -12,8 +12,10 @@
     },
     "version": "2.4.2-p1",
     "require": {
+        "cweagans/composer-patches": "^1.7",
+        "magento/composer-root-update-plugin": "~1.1",
         "magento/product-community-edition": "2.4.2-p1",
-        "magento/composer-root-update-plugin": "~1.1"
+        "trustpilot/module-reviews": "^2.6"
     },
     "autoload": {
         "exclude-from-classmap": [
@@ -74,7 +76,12 @@
         }
     ],
     "extra": {
-        "magento-force": "override"
+        "magento-force": "override",
+        "composer-exit-on-patch-failure": true,
+        "patches": {
+            "magento/module-payment": {
+                "MAGETWO-56934: Checkout page freezes when ordering with Authorize.net with invalid credit card": "patches/composer/github-issue-6474.diff"
+            }
+        }
     }
 }
-
