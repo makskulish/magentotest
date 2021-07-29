@@ -7,7 +7,7 @@ define(['jquery'], function($) {
             function(value, element) {
                 return value.split(' ').length >= 10;
             },
-            $.mage.__('Please enter 10 character or greater than 10')
+            $.mage.__('Please enter 10 characters or greater than 10!')
         )
     }
 });

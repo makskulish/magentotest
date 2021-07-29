@@ -7,8 +7,14 @@
 <div>
     <h2>Hello World</h2>
     <form id="my-form"  data-mage-init='{"validation":{"rules": {"field-4": {"required":true, "validate-min-ten":true}}}}'>
-        <input type="text" name="field-4" id="field-4" >
+        <input type="text" name="field-4" id="field-4" required minlength="10">
         <input type="submit" value="Show Message" style="margin-top: 20px;">
     </form>
+
+    <form style="margin-top: 50px;" id="my-form2"  data-mage-init='{"validation":{"rules": {"myFile": {"required":true, "onlyimages":true}}}}' >
+        <input name="myFile" type="file" >
+        <input type="submit" value="Upload image" style="margin-top: 20px;">
+    </form>
+
 </div>
 
