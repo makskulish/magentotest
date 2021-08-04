@@ -1,5 +1,7 @@
 <page xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <head>
+        <css after="-" src="css/select2.min.css"/>
+
         <script src="js/custom.js"/>
     </head>
 </page>
