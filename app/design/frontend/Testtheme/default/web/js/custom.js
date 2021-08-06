@@ -9,7 +9,7 @@ require([
     });
 
     $(document).ready(function() {
-        $('#cars').select2({
+        $('select').select2({
             selectOnClose: true
         });
     });
