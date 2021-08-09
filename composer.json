@@ -79,8 +79,11 @@
         "magento-force": "override",
         "composer-exit-on-patch-failure": true,
         "patches": {
-            "magento/module-payment": {
-                "MAGETWO-56934: Checkout page freezes when ordering with Authorize.net with invalid credit card": "patches/composer/github-issue-6474.diff"
+            "magento/module-ui": {
+                "Patch for issue 21734": "patches/composer/github-issue-21734-magento-ui.diff"
+            },
+            "magento/module-catalog": {
+                "“Patch for issue 21734": "patches/composer/github-issue-21734-magento-catalog.diff"
             }
         }
     }

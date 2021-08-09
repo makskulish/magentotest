@@ -5,15 +5,13 @@ define(['jquery'], function($) {
         $.validator.addMethod(
             'onlyimages',
             function (value, element) {
-                if (this.optional(element) || !element.files || !element.files[0]) {
-                    return true;
-                } else {
-                    var fileType = element.files[0].type;
-                    var isImage = /^(image)\//i.test(fileType);
-                    return isImage;
-                }
+                var file = element.files[0];
+                var fileType = file["type"];
+                var validImageTypes = ["image/jpg", "image/gif", "image/jpeg", "image/png"];
+                var validImage = $.inArray(fileType, validImageTypes) > 0;
+                return validImage;
             },
-            $.mage.__('Sorry, we can only accept image files.')
+            $.mage.__('Invalid image format! Image format must be .jpg, .jpeg, .png, .gif.')
         )
     }
 });
