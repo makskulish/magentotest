@@ -23,10 +23,14 @@
     <td class="col col-method"
         attr="'id': 'label_method_' + method.method_code + '_' + method.carrier_code"
         text="method.method_title" />
-    <td class="col col-carrier"
+    <td class="col col-carrier test2"
         attr="'id': 'label_carrier_' + method.method_code + '_' + method.carrier_code"
         text="method.carrier_title" />
-    <td><button>Click</button></td>
+    <td>
+        <div>
+            <a id="click-me2">Click Me</a>
+        </div>
+    </td>
 </tr>
 <tr class="row row-error"
     if="method.error_message">
