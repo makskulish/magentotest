@@ -3,8 +3,9 @@ require([
 ], function($){
     $(document).ready(function() {
 
-        $(document).on("click","#checkoutnext", function() {
-            alert("Test!");
+
+        $(document).on("click","#click-me2", function() {
+            $('.comment-section').hide();
         });
 
     });
