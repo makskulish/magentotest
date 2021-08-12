@@ -6,6 +6,7 @@ require([
         $("#test_button").click(function(){
             $(".test-block-content").toggle();
         });
+
     });
 
     $(document).ready(function() {
