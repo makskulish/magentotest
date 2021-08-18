@@ -1,0 +1,7 @@
+<page layout="1column" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="product.info.main">
+            <block class="Magento\Catalog\Block\Product\View\Attributes" name="product.attributes.video.popup" after="product.info.overview" template="Magento_Catalog::product/view/popup.phtml"/>
+        </referenceContainer>
+    </body>
+</page>
