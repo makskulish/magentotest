@@ -3,7 +3,8 @@ var config = {
         '*': {
             custom: 'js/custom',
             select2: 'js/select2.min',
-            myjs: 'js/myfile'
+            myjs: 'js/myfile',
+            slider: 'js/slick.min'
             /*myjs2: 'Magento_Checkout/js/custom2'*/
         }
     },
