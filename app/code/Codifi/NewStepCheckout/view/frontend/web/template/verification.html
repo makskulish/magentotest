@@ -1,0 +1,21 @@
+<li id="verification-block" class="hot_deals" data-bind="fadeVisible: isVisible">
+    <div class="step-title" data-bind="i18n: 'Hot Deals'" data-role="title"></div>
+    <div id="checkout-step-title"
+         class="step-content"
+         data-role="content">
+        <br/>
+        <form class="verification-form" data-bind="submit: setVerification" novalidate="novalidate">
+            <div class="actions-toolbar">
+                <h3>Are you 18 years old?</h3>
+                <div class="primary">
+                    <button data-role="opc-continue" type="submit" class="button action show-modal primary">
+                        <span data-bind="i18n: 'No'"></span>
+                    </button>
+                    <button data-role="opc-continue" type="button" class="button action continue primary" data-bind="click: navigateToNextStep">
+                        <span data-bind="i18n: 'Yes'"></span>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</li>
