@@ -11,7 +11,7 @@ require([
 
     $(document).ready(function() {
 
-        $('select').select2({
+        $('#cars').select2({
             selectOnClose: true
         });
 
