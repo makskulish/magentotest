@@ -22,6 +22,22 @@
                                                         <item name="children" xsi:type="array">
                                                             <item name="shipping-address-fieldset" xsi:type="array">
                                                                 <item name="children" xsi:type="array">
+                                                                    <item name="region_id" xsi:type="array">
+                                                                        <item name="component" xsi:type="string">Magento_Ui/js/form/element/region</item>
+                                                                        <item name="config" xsi:type="array">
+                                                                            <item name="template" xsi:type="string">ui/form/field</item>
+                                                                            <item name="elementTmpl" xsi:type="string">ui/form/element/select</item>
+                                                                            <item name="customEntry" xsi:type="string">shippingAddress.region</item>
+                                                                        </item>
+                                                                        <item name="validation" xsi:type="array">
+                                                                            <item name="stateValid" xsi:type="boolean">true</item>
+                                                                        </item>
+                                                                        <!-- Value of region_id field is filtered by the value of county_id attribute -->
+                                                                        <item name="filterBy" xsi:type="array">
+                                                                            <item name="target" xsi:type="string"><![CDATA[${ $.provider }:${ $.parentScope }.country_id]]></item>
+                                                                            <item name="field" xsi:type="string">country_id</item>
+                                                                        </item>
+                                                                    </item>
                                                                     <item name="telephone" xsi:type="array">
                                                                         <item name="config" xsi:type="array">
                                                                             <item name="placeholder" xsi:type="string">(XXX) XXX-XXXX</item>
