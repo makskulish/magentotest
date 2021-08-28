@@ -24,16 +24,20 @@ class LayoutProcessorPlugin
             'label' => 'Address Type',
             'provider' => 'checkoutProvider',
             'visible' => true,
-            'validation' => ['required-entry' => true],
+            'validation' => ['required-entry' => true, 'validate-company' => true],
             'sortOrder' => 150,
             'id' => 'drop-down',
             'options' => [
                 [
-                    'value' => 'residential',
+                    'value' => '',
+                    'label' => '',
+                ],
+                [
+                    'value' => 'Residential',
                     'label' => 'Residential',
                 ],
                 [
-                    'value' => 'local',
+                    'value' => 'Local',
                     'label' => 'Local',
                 ]
             ]
