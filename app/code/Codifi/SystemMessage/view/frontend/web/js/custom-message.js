@@ -8,7 +8,13 @@ define ([
 
     $('#customForm').on('submit', function(e){
         e.preventDefault();
-        var msg = $.mage.__($(this).serialize());
+        var showResult = $(this).serializeArray();
+        var values = {};
+        $.each(showResult, function(i, field){
+            values[this.name] = this.value;
+        });
+
+        var msg = $.mage.__(values.text + '  ' + values.message);
 
         customerData.set('messages', {
             messages: [{
