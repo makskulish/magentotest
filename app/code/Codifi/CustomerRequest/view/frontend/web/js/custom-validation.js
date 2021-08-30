@@ -3,15 +3,11 @@ define(['jquery'], function($) {
 
     return function() {
         $.validator.addMethod(
-            'onlyimages',
-            function (value, element) {
-                var file = element.files[0];
-                var fileType = file["type"];
-                var validImageTypes = ["image/jpg", "image/gif", "image/jpeg", "image/png"];
-                var validImage = $.inArray(fileType, validImageTypes) > 0;
-                return validImage;
+            'validate-min-ten',
+            function(value) {
+                return value.length >= 10;
             },
-            $.mage.__('Invalid image format! Image format must be .jpg, .jpeg, .png, .gif.')
+            $.mage.__('Please enter 10 characters or greater than 10!')
         )
     }
 });

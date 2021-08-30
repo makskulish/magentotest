@@ -1,6 +1,6 @@
 require([
-    "jquery","select2"
-], function($){
+    "jquery","select2","slider"
+], function($) {
     "use strict";
     $(window).load(function() {
         $("#test_button").click(function(){
@@ -10,9 +10,19 @@ require([
     });
 
     $(document).ready(function() {
-        $('select').select2({
+
+        $('#cars').select2({
             selectOnClose: true
         });
+
+        $('.products-related .product-items').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+        });
+
     });
 
 
