@@ -21,10 +21,5 @@ var config = {
                 'Magento_Catalog/js/product/breadcrumbs': true
             }
         }
-    },
-    shim: {
-        'attributepopup': {
-            deps: ['jquery']
-        }
     }
 };
