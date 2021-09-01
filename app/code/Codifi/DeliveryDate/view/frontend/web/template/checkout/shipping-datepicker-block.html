@@ -1,0 +1,17 @@
+<div class="date-wrapper">
+    <label for="datepicker">Delivery date:</label>
+    <input type="text" id="datepicker" name="datepicker" placeholder="YYYY-MM-DD" data-mage-init='{"selectdate": {}}'>
+    <div><a id="click-info2">Information</a></div>
+</div>
+
+<script type="text/javascript">
+    require([
+        "jquery","mage/calendar"
+    ], function($) {
+
+        $("#click-info2").click(function() {
+            alert('teeest');
+        });
+
+    });
+</script>
