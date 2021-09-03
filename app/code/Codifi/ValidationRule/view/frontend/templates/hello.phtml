@@ -4,3 +4,21 @@
 <label><?= __("Data retrieved from Block is ") ?></label>
 <h1><?= $block->getText() ?></h1>
 <h3>TEEEEST</h3>
+
+<div id="emipro-ko-example" data-bind="scope:'emipro-ko-example'">
+    <!-- ko template: getTemplate() --><!-- /ko -->
+    <script type="text/x-magento-init">
+    {
+        "*": {
+            "Magento_Ui/js/core/app": {
+               "components": {
+                    "emipro-ko-example": {
+                        "component": "Codifi_ValidationRule/js/kotemplate",
+                        "template" : "Codifi_ValidationRule/kotemplate"
+                        }
+                    }
+                }
+            }
+    }
+    </script>
+</div>
