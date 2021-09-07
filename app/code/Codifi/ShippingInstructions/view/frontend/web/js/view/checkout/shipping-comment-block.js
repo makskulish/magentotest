@@ -2,22 +2,24 @@ define([
     'jquery',
     'ko',
     'uiComponent',
-    'Magento_Checkout/js/model/quote'
-], function ($, ko, Component, quote) {
+    'Magento_Checkout/js/model/quote',
+    'uiRegistry'
+], function ($, ko, Component, quote, registry) {
     'use strict';
 
     return Component.extend({
         defaults: {
             template: 'Codifi_ShippingInstructions/checkout/shipping-comment-block'
         },
-        initObservable: function () {
-            this.selectedMethod = ko.computed(function() {
-                var method = quote.shippingMethod();
-                var selectedMethod = method != null ? method.method_code : null;
-                return selectedMethod;
-            }, this);
 
-            return this;
-        },
+        inputText: ko.observable('')
+
+        /*initialize: function () {
+            this._super();
+
+            this.inputText.subscribe(function (value) {
+                console.log(value);
+            });
+        }*/
     });
 });
