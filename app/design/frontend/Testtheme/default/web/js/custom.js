@@ -1,5 +1,5 @@
 require([
-    "jquery","select2","slider"
+    "jquery","select2","slider", "mage/calendar"
 ], function($) {
     "use strict";
     $(window).load(function() {
@@ -11,7 +11,7 @@ require([
 
     $(document).ready(function() {
 
-        $('select').select2({
+        $('#cars').select2({
             selectOnClose: true
         });
 
@@ -21,6 +21,16 @@ require([
             slidesToScroll: 1,
             autoplay: true,
             autoplaySpeed: 2000,
+        });
+
+        $(function() {
+            $("#datepickecker").datepicker({
+                dateFormat: 'mm/dd/yy',
+                changeMonth: true,
+                changeYear: true,
+                minDate: 0,
+                maxDate: "+1M +5D"
+            });
         });
 
     });
