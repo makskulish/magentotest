@@ -5,7 +5,8 @@ define(
         'underscore',
         'Magento_Checkout/js/model/step-navigator',
         'Magento_Ui/js/modal/modal',
-        'jquery'
+        'jquery',
+        'Magento_Ui/js/form/form'
     ],
     function (
         ko,
