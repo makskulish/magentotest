@@ -75,9 +75,9 @@ dev/
 generated/
 install.sh
 lib/
-package.json.sample
 phpserver/
 pub/
 setup/
 var/
 vendor/
+package.json.sample
