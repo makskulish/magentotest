@@ -9,7 +9,6 @@
 /** @var $block \Magento\ConfigurableProduct\Block\Product\View\Type\Configurable*/
 $_product    = $block->getProduct();
 $_attributes = $block->decorateArray($block->getAllowAttributes());
-
 ?>
 <?php if ($_product->isSaleable() && count($_attributes)) :?>
     <?php foreach ($_attributes as $_attribute) : ?>
@@ -20,10 +19,10 @@ $_attributes = $block->decorateArray($block->getAllowAttributes());
             <div class="control">
                 <select name="super_attribute[<?= $block->escapeHtmlAttr($_attribute->getAttributeId()) ?>]"
                         data-selector="super_attribute[<?= $block->escapeHtmlAttr($_attribute->getAttributeId()) ?>]"
-                        data-validate="{required:true}"
+                        data-validate="{'validate-product':true}"
                         id="attribute<?= $block->escapeHtmlAttr($_attribute->getAttributeId()) ?>"
                         class="super-attribute-select">
-                    <option value=""><?php /* @escapeNotVerified */ echo __('Select ').strtolower($block->escapeHtml($_attribute->getProductAttribute()->getStoreLabel())) ?></option>
+                    <option value=""><?php /* @escapeNotVerified */ echo __('Please select ').strtolower($block->escapeHtml($_attribute->getProductAttribute()->getStoreLabel())) ?></option>
                 </select>
             </div>
         </div>
