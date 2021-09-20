@@ -5,8 +5,8 @@ define(['jquery'], function($) {
         $.validator.addMethod(
             'validate-car',
             function (value) {
-                return value !== undefined;
-                console.log(value);
+                return value !== '';
+                //console.log(value);
             },
             $.mage.__('Please, select car.')
         )
